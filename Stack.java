@@ -12,23 +12,39 @@ public class Stack {
     }
     
     public int size() {
-		// TODO
+		return top + 1; // car on commence à 0
     }
    
     public void push(String s) {
-		// TODO	   
+        if (size() == maxSize) {
+            System.out.println("Cannot complete the operation. Stack is full");
+        } else {
+            this.stackArray[++top] = s;
+        }
     }
 
     public String pop() {
-		// TODO
+		if (isEmpty()) {
+            return null;
+        }else {
+            String elementPopped = stackArray[top];
+            this.stackArray[top] = null;
+            top--;
+            return elementPopped;
+        }
+
    }
     
     public String peek() {
-		// TODO
+        if (isEmpty()) {
+            return null;
+        }else {
+            return this.stackArray[top];
+        }
    }
 
     public boolean isEmpty() {
-		// TODO
+		return this.top == -1;
     }
     
     // Print stack elements from top to bottom
