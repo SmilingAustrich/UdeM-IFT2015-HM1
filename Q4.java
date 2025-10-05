@@ -11,7 +11,7 @@ public class Q4 {
      */
     public static Node rm_mid(Node head) {
         if (head == null) {
-            names.push("???"); // okk si la liste est vide, push ???
+            names.push("???"); // okk si la liste est vide, push "???"
             return null;
         }
 
